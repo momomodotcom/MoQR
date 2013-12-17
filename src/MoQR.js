@@ -1,27 +1,20 @@
 /**
- * MoQuire
- * Why?
- * - Smaller than the 50 kb in require.js
- * - Nicer syntax
- * - Will allow us to distribute the MoJS framework code without the need to third party licenses
- * - Supports locking synchronous mode ( useful at occasion )
- * - Faster
- * - Allows you to combine several require files into one big file, for ultimate minimization and GZIP results
- *      1) In require.js you are forced to have one define per file, making it impossible to merge several files into one
- * - Not two methods, ie: require and defined. We only have one public method. MoQR(), which can be used both to require and define,
- *   just return a value to define.
- * - If your MoQR() statement is not in a file on its own, then you can name it in the first parameter.
- * - Cross domain
- * - Circular dependencies - Although with some requirements on usage
+ * Copyright (C) 2013 momomo.com <opensource@momomo.com>
  *
- * - TODO CSS, LESS, TEXT
+ * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007;
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * - TODO Kill promises from cache when there is a fail on file load, otherwise possible memory leak, but not really big issue
- * - TODO Remove unenessary apply and call calls, and invoke method directly where possible
+ *     http://www.gnu.org/licenses/lgpl-3.0.txt
  *
- * Uses a promise based approach, allows you to define statements in any order
- * Can define as path/to/file.js  .... http://absolute/path/to/file.js
- * and someone looking for path/to/file.js will first try to find the first, if not, then it tries the full path, relative to app.root
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @Author Mohamed Seifeddine
+ * @Author Philip Nilsson
  */
 (function() {
         callback();
